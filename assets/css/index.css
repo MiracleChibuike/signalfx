@@ -1,0 +1,341 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  scroll-behavior: smooth;
+}
+:root {
+  --clr-fx-green: #05903f;
+  --clr_fx_faded_green: #29bc7a;
+  --clr-fx-red: #cf1e16;
+  --clr-fx_red_faded: #cc837f;
+  --clr-fx-dark: #191514;
+  --clr-fx-white_main: #fff;
+  --clr-fx-gray: #f1f1f1;
+  --clr-gray-main: rgb(150, 150, 150, 0.5);
+}
+.nav {
+  background: var(--clr-fx-white_main);
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 35px;
+  box-shadow: 0 0 3px var(--clr-fx-dark);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+.logo img {
+  width: 150px;
+  position: relative;
+}
+.nav_Contents ul {
+  display: flex;
+  list-style-type: none;
+}
+.nav_Contents ul li {
+  padding: 25px;
+}
+.nav_Contents ul li:hover {
+  transition: 0.3s;
+  cursor: pointer;
+  color: var(--clr-fx-red);
+  scale: 1.2;
+}
+.Contents_controls {
+  display: flex;
+}
+
+@keyframes navContentsBar {
+  0% {
+    opacity: 0;
+    filter: brightness(0%);
+    transform: scale(0);
+    width: 0;
+  }
+  50% {
+    opacity: 1;
+    filter: brightness(90%);
+    transform: scale(1.1);
+    width: 70%;
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(90%);
+    transform: scale(1);
+    width: 70%;
+  }
+}
+.logIns {
+  position: relative;
+  top: 10px;
+}
+.nav_Contents {
+  margin: 0 200px;
+}
+#login_btn {
+  border: 1px solid var(--clr-fx-green);
+  background: transparent;
+  padding: 10px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 0 5px;
+  font-size: 16px;
+}
+#login_btn:hover {
+  transition: 0.3s ease-in-out;
+  background: var(--clr_fx_faded_green);
+  color: var(--clr-fx-white_main);
+  scale: 1.1;
+}
+#signup_btn {
+  border: 1px solid var(--clr-fx-green);
+  background: var(--clr-fx-green);
+  padding: 10px 25px;
+  border-radius: 4px;
+  color: var(--clr-fx-white_main);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+}
+#signup_btn:hover {
+  transition: 0.3s ease;
+  transform: translateX(5px);
+  scale: 1.1;
+  box-shadow: 1px 1px 5px var(--clr-fx-dark);
+}
+.menu_Icons {
+  display: none;
+}
+#show_nav,
+#hide_navs {
+  font-size: 25px;
+  padding: 5px 8px;
+}
+#show_nav:hover,
+#hide_navs:hover {
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  color: var(--clr-fx_red_faded);
+}
+
+#hide_navs {
+  display: none;
+}
+
+/* Home */
+#Home {
+  position: relative;
+  top: 150px;
+  padding: 20px;
+}
+.home_Contents {
+  display: flex;
+  justify-content: space-evenly;
+}
+.home_caption {
+  font-size: 3.3rem;
+  font-weight: lighter;
+  line-height: 1.3;
+}
+.homeInfo p {
+  color: var(--clr-gray-main);
+  margin: 15px 0;
+  line-height: 1.2;
+}
+#Join_classbtn,
+#Enroll_btn {
+  border: 1px solid var(--clr-fx-green);
+  background: transparent;
+  padding: 15px 30px;
+  border-radius: 5px;
+  color: var(--clr-fx-green);
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+  top: 20px;
+}
+#Enroll_btn {
+  margin: 0 8px;
+}
+#Join_classbtn:hover,
+#Enroll_btn:hover {
+  transition: 0.3s;
+  background: var(--clr-fx-green);
+  color: var(--clr-fx-white_main);
+  box-shadow: 0 0 10px var(--clr_fx_faded_green);
+  
+}
+
+  .homeImg {
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            width: 400px;
+            border-top: 50px solid var(--clr-fx_red_faded);
+                        border-left: 50px solid var(--clr-fx_red_faded);
+                        border-radius: 50px;
+
+        }
+
+        .homeImg::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: transparent;
+            transition: background-color 0.5s ease;
+        }
+
+        #forex_lord_img {
+            border-radius: 10px;
+            width: 400px;
+            transition: transform 0.5s ease, background-color 0.5s ease;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .homeImg:hover #forex_lord_img {
+            transform: scale(1.1);
+        }
+/* Media querry - Small Screens Mobile */
+
+@media (min-width: 0px) and (max-width: 750px) {
+  .Contents_controls {
+   background: var(--clr_fx_faded_green);
+    position: absolute;
+    top: 75px;
+    left: 0;
+    right: 0;
+    width: 70%;
+    height: 900%;
+    display: none;
+    animation: navContentsBar 0.5s ease-in-out;
+    z-index: 100;
+    color: var(--clr-fx-white_main);
+    /* box-shadow: 0 0 2px var(gr); */
+  }
+  .nav_Contents {
+    margin: 0;
+  }
+  .nav_Contents ul {
+    display: block;
+  }
+  .nav_Contents ul li:hover {
+    scale: none;
+    transform: translateX(10px);
+    color: var(--clr-fx-gray);
+    border-left: 2px solid var(--clr-fx-white_main);
+    /* background: var(--clr-fx_red_faded);
+        border-left: 3px solid var(--clr-fx-red);
+        border-radius: 5px;
+        color: var(--clr-fx-white_main); */
+  }
+  .logIns {
+    position: relative;
+    top: 200px;
+  }
+  #login_btn{
+    border: 1px solid var(--clr-fx-gray);
+    color: var(--clr-fx-white_main);
+  }
+  #signup_btn{
+    background: var(--clr-fx-white_main);
+    border: 1px solid var(--clr-fx-white_main);
+    color: var(--clr-fx-dark);
+    box-shadow: 0 0 10px var(--clr-fx-white_main);
+  }
+  .menu_Icons {
+    display: block;
+  }
+  .logo img {
+    width: 100px;
+  }
+
+  /* Home */
+  #Home{
+    top: 100px;
+  }
+  .home_Contents{
+    display: block;
+  }
+  .homeInfo, .homeImg{
+    text-align: center;
+  }
+  .homeImg{
+    width: auto;
+    position: relative;
+    top: 70px;
+    border: none;
+    border-radius: 20px;
+  }
+  .home_caption{
+    font-size: 2.3rem;
+  }
+  #forex_lord_img{
+    width: 100%;
+  }
+}
+
+/* Media querry - Big Screens Ipads */
+@media (min-width: 760px) and (max-width: 1360px) {
+  .Contents_controls {
+    display: block;
+    background: var(--clr-fx-gray);
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 70%;
+    height: 900%;
+    display: none;
+    z-index: 100;
+        animation: navContentsBar 0.5s ease-in-out;
+
+  }
+  .nav_Contents {
+    margin: 0;
+  }
+  .nav_Contents ul {
+    display: block;
+  }
+  .logIns {
+    position: relative;
+    top: 200px;
+  }
+  .menu_Icons {
+    display: block;
+  }
+  .logo img {
+    width: 100px;
+  }
+  /* Home */
+  #Home{
+    top: 100px;
+  }
+  .home_Contents{
+    display: flex;
+  }
+  /* .homeInfo, .homeImg{
+    text-align: center;
+  } */
+  .homeImg{
+    width: auto;
+    position: relative;
+    top: 70px;
+    border: none;
+    border-radius: 20px;
+  }
+  .home_caption{
+    font-size: 2.3rem;
+  }
+  #forex_lord_img{
+    width: 400px;
+  }
+}
