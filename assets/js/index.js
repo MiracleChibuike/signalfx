@@ -4,10 +4,12 @@ const nav_show = document.getElementById("show_nav");
 const nav_hide = document.getElementById("hide_navs");
 var menu_Contents = document.querySelector(".Contents_controls");
 var Log_Ins = document.querySelector(".logIns");
+var home_Contents = document.querySelector(".Inner_contents");
 
 const show_nav_Elements = () => {
     if (menu_Contents.style.display = "none") {
-        menu_Contents.style.display = "block"
+        menu_Contents.style.display = "block";
+        home_Contents.classList.add("RunAdd");
     }
     nav_hide.style.display = "block";
     nav_show.style.display = "none"
@@ -15,7 +17,8 @@ const show_nav_Elements = () => {
 
 const hide_nav_Elements = () => {
     if (menu_Contents.style.display = "block") {
-        menu_Contents.style.display = "none"
+        menu_Contents.style.display = "none";
+            home_Contents.classList.remove("RunAdd");
     }
      nav_hide.style.display = "none";
      nav_show.style.display = "block";
