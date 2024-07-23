@@ -1,5 +1,23 @@
 
 
+
+var header = document.querySelector(".header_Animate");
+var Grand_Container = document.querySelector(".containerMain");
+
+
+
+const showLoader = () => {
+    Grand_Container.style.display = "none";
+    header.style.display = "block";
+    setTimeout(function () {
+        Grand_Container.style.display = "block";
+        header.style.display = "none"
+    }, 7000)
+};
+
+showLoader()
+
+
 const nav_show = document.getElementById("show_nav");
 const nav_hide = document.getElementById("hide_navs");
 var menu_Contents = document.querySelector(".Contents_controls");
@@ -35,3 +53,60 @@ nav_hide.addEventListener("click", (e) => {
     e.preventDefault();
     hide_nav_Elements();
 })
+
+const checkNav_Elements = () => {
+    if (menu_Contents) {
+          menu_Contents.style.display = "none";
+          home_Contents.classList.remove("RunAdd");
+    }
+}
+
+// Scrolling Animation
+ // Function to check if an element is in the viewport
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+    // Function to add the 'visible' class to containers in the viewport
+    function addVisibleClass() {
+      var containers = document.querySelectorAll(".animates");
+      containers.forEach(container => {
+        if (isInViewport(container)) {
+          container.classList.add('visible');
+        }
+      });
+    }
+
+    // Add event listeners for scroll and load
+    window.addEventListener('scroll', addVisibleClass);
+    window.addEventListener('load', addVisibleClass);
+
+
+
+// HomeTab
+    const homeImg = document.querySelector(".homeImg");
+    const forexLordImg = document.getElementById("forex_lord_img");
+
+    homeImg.addEventListener("mouseenter", () => {
+      homeImg.classList.add("hover");
+      forexLordImg.classList.add("hovered");
+    });
+
+    homeImg.addEventListener("mouseleave", () => {
+      homeImg.classList.remove("hover");
+      forexLordImg.classList.remove("hovered");
+    });
+
+
+
+
+
+
+    
+ 
