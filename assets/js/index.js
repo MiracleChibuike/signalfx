@@ -110,9 +110,8 @@ const checkNav_Elements = () => {
 
 
     const load_SignUp_Page = () => {
-      setTimeout(function () {
-        window.location.href = "signup.html";
-      }, 1000);
+             window.location.href = "signup.html";
+
     }
     btn_Sign_Up.addEventListener("click", (e) => {
       e.preventDefault();

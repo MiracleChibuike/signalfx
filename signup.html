@@ -52,6 +52,7 @@
   --clr-fx-white_main: #fff;
   --clr-fx-gray: #f1f1f1;
   --clr-gray-main: rgb(150, 150, 150, 0.7);
+  --clr-semi-white: #6e6a6a;
 }
         .signUp_Container{
           margin: 150px 0;
@@ -92,6 +93,7 @@
         label{
             margin: 10px 0;
             font-size: 16px;
+            color: var(--clr-gray-main);
         }
         .first_name input, .last_name input, .userName input, .email input, .whatsAppID input,
         .telegram input, .password input, .password_Confirm input{
@@ -101,12 +103,12 @@
             font-size: 15px;
              transition: transform 0.9s ease, background-color 0.9s ease;
              /* width: 250px; */
-             color: var(--clr-gray-main);
+             color: var(--clr-semi-white);
              border-radius: 8px;
         }
         .first_name input:focus, .last_name input:focus, .userName input:focus, .email input:focus,
          .whatsAppID input:focus, .telegram input:focus, .password input:focus, .password_Confirm input:focus  {
-            transform: translateY(5px);
+            transform: translateY(-5px);
             transition: .7s;
             box-shadow: 0 0 3px var(--clr_fx_faded_green);
         }
@@ -136,6 +138,22 @@
             box-shadow: 0 0 10px var(--clr-fx-green);
             transform: scale(1.1);
             transition: .5s;
+         }
+         .required{
+            color: var(--clr-fx_red_faded);
+              transition: transform 0.9s ease, background-color 0.9s ease;
+              display: none;
+         }
+         .required:hover{
+            transform: translateX(5px);
+         }
+         #passcode_Confirm_val, #passcode_val, #TG_ID_val, #whatsApp_No_val, #email_val,
+         #username_val, #L-name_val, #f-name_Val{
+            color: var(--clr-fx_red_faded);
+         }
+         .addError{
+            border: 1px solid var(--clr-fx_red_faded);
+
          }
     </style>
   </head>
@@ -190,34 +208,42 @@
                     <div class="first_name">
                         <label for="f-name">First Name</label>
                         <input type="text" id="f-name" placeholder="Ex. Miracle">
+                        <small class="required" id="f-name_Val">Please input First Name</small>
                     </div>
                     <div class="last_name">
                         <label for="L-name">Last Name</label>
                         <input type="text" id="L-name" placeholder="Ex. Chibuike">
+                        <small class="required" id="L-name_val">Please input Last Name</small>
                     </div>
                     <div class="userName">
                         <label for="user-name">Username</label>
                         <input type="text" id="user-name" placeholder="Ex. MiracleChibuike" autocomplete="username">
+                        <small class="required" id="username_val">Username Cannot be empty</small>
                     </div>
                     <div class="email">
                         <label for="email_add">Email Address</label>
                         <input type="email" id="email_add" placeholder="youremail.com">
+                        <small class="required" id="email_val">Email is required</small>
                     </div>
                     <div class="whatsAppID">
                         <label for="whatsApp_No">WhatsApp Number</label>
                         <input type="tel" id="whatsApp_No" placeholder="+234--- ---- -----">
+                        <small class="required" id="whatsApp_No_val">Cannot be empty</small>
                     </div>
                     <div class="telegram">
                         <label for="TG_ID">Telegram Id(Username)</label>
                         <input type="text" id="TG_ID" placeholder="Your Telegram Username">
+                        <small class="required" id="TG_ID_val">Please enter your ID</small>
                     </div>
                     <div class="password">
                         <label for="Passcode">Create a password</label>
                         <input type="password" id="Passcode" placeholder="*******" autocomplete="new-password">
+                        <small class="required" id="passcode_val">Please create a password</small>
                     </div>
                     <div class="password_Confirm">
                         <label for="passcode_Confirm">Re-type password</label>
                         <input type="password" id="passcode_Confirm" placeholder="*******" autocomplete="new-password">
+                        <small class="required" id="passcode_Confirm_val">Password do not match</small>
                     </div>
                     <div class="policy_Accept">
                         <input type="checkbox" name="policy_Accept" id="policy_Accept">
