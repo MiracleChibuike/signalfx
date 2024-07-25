@@ -1,21 +1,21 @@
 
 
 
-var header = document.querySelector(".header_Animate");
-var Grand_Container = document.querySelector(".containerMain");
+// var header = document.querySelector(".header_Animate");
+// var Grand_Container = document.querySelector(".containerMain");
 
 
 
-const showLoader = () => {
-    Grand_Container.style.display = "none";
-    header.style.display = "block";
-    setTimeout(function () {
-        Grand_Container.style.display = "block";
-        header.style.display = "none"
-    }, 7000)
-};
+// const showLoader = () => {
+//     Grand_Container.style.display = "none";
+//     header.style.display = "block";
+//     setTimeout(function () {
+//         Grand_Container.style.display = "block";
+//         header.style.display = "none"
+//     }, 7000)
+// };
 
-showLoader()
+// showLoader()
 
 
 const nav_show = document.getElementById("show_nav");
@@ -102,6 +102,36 @@ const checkNav_Elements = () => {
       homeImg.classList.remove("hover");
       forexLordImg.classList.remove("hovered");
     });
+
+    // Login/SignUp Activations
+
+    const btn_Sign_Up = document.getElementById("signup_btn");
+    const login_btn = document.getElementById("login_btn");
+
+
+    const load_SignUp_Page = () => {
+      setTimeout(function () {
+        window.location.href = "signup.html";
+      }, 1000);
+    }
+    btn_Sign_Up.addEventListener("click", (e) => {
+      e.preventDefault();
+      load_SignUp_Page();
+      
+    })
+
+    // Prevent Image dragging
+
+    document.querySelectorAll("img").forEach((img) => {
+      img.addEventListener("mousedown", function (event) {
+        event.preventDefault();
+      });
+      img.addEventListener("contextmenu", function (event) {
+        event.preventDefault();
+      });
+    });
+
+
 
 
 
