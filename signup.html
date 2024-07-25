@@ -155,6 +155,28 @@
             border: 1px solid var(--clr-fx_red_faded);
 
          }
+         .shows{
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+            bottom: 30px;
+            /* background: var(--clr-fx_red_faded); */
+
+         }
+         .shows i{
+            font-size: 15px;
+            color: var(--clr-semi-white);
+            position: relative;
+             left: -15px;
+
+         }
+         #show_default, #show_password{
+            display: none;
+             transition: transform 0.9s ease, background-color 0.9s ease;
+         }
+         #show_default:focus{
+            transition: .4s;
+         }
     </style>
   </head>
   <body>
@@ -238,11 +260,20 @@
                     <div class="password">
                         <label for="Passcode">Create a password</label>
                         <input type="password" id="Passcode" placeholder="*******" autocomplete="new-password">
+                       <div class="shows">
+                        <i class="fa-solid fa-eye-slash" id="hide_default"></i>
+                        <i class="fa-solid fa-eye" id="show_default"></i>
+                       </div>
+                        <!-- <i class="fa-regular fa-eye-slash"></i> -->
                         <small class="required" id="passcode_val">Please create a password</small>
                     </div>
                     <div class="password_Confirm">
                         <label for="passcode_Confirm">Re-type password</label>
                         <input type="password" id="passcode_Confirm" placeholder="*******" autocomplete="new-password">
+                        <div class="shows">
+                            <i class="fa-solid fa-eye-slash" id="hide_password" onclick="show_Password_Retype()"></i>
+                            <i class="fa-solid fa-eye" id="show_password"></i>
+                        </div>
                         <small class="required" id="passcode_Confirm_val">Password do not match</small>
                     </div>
                     <div class="policy_Accept">

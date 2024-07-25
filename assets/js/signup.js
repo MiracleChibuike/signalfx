@@ -132,12 +132,49 @@ Passcode_create.addEventListener("keyup", (e) => {
     handleValInputs(Passcode_create, "passcode_val");
 })
 
+const show_passcode_default = document.getElementById("show_default");
+const hide_passcode_default = document.getElementById("hide_default");
+
+const check_DefaultPasscode = () => {
+    if (Passcode_create.type === "password") {
+        Passcode_create.type = "text";
+        hide_passcode_default.style.display = "none";
+        show_passcode_default.style.display = "block"
+    }
+};
+
+hide_passcode_default.addEventListener("click", (e) => {
+    e.preventDefault();
+    check_DefaultPasscode();
+});
+
+const hidePasswords = () => {
+    if (Passcode_create.type === "text") {
+      Passcode_create.type = "password";
+      hide_passcode_default.style.display = "block";
+      show_passcode_default.style.display = "none";
+    }
+};
+
+show_passcode_default.addEventListener("click", (e) => {
+    e.preventDefault();
+    hidePasswords();
+})
 
 const check_passwords = () => {
     if (Passcode_create.value != Passcode_Confirm.value) {
         console.error("Passwords does not match")
     }
 }
+
+// Toggle password visibility
+const password_show = document.getElementById("show_password");
+const hide_password = document.getElementById("hide_password")
+const show_Password_Retype = () => {
+    
+}
+
+
 
 // Handle forms
 const form = document.getElementById("singUp_Form");
