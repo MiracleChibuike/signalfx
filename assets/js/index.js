@@ -1,21 +1,21 @@
 
 
 
-// var header = document.querySelector(".header_Animate");
-// var Grand_Container = document.querySelector(".containerMain");
+var header = document.querySelector(".header_Animate");
+var Grand_Container = document.querySelector(".containerMain");
 
 
 
-// const showLoader = () => {
-//     Grand_Container.style.display = "none";
-//     header.style.display = "block";
-//     setTimeout(function () {
-//         Grand_Container.style.display = "block";
-//         header.style.display = "none"
-//     }, 7000)
-// };
+const showLoader = () => {
+    Grand_Container.style.display = "none";
+    header.style.display = "block";
+    setTimeout(function () {
+        Grand_Container.style.display = "block";
+        header.style.display = "none"
+    }, 7000)
+};
 
-// showLoader()
+showLoader()
 
 
 const nav_show = document.getElementById("show_nav");
