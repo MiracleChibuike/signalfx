@@ -110,8 +110,7 @@ const checkNav_Elements = () => {
 
 
     const load_SignUp_Page = () => {
-             window.location.href = "signup.html";
-
+             window.location.href = "Signup.html";
     }
     btn_Sign_Up.addEventListener("click", (e) => {
       e.preventDefault();

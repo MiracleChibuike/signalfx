@@ -46,10 +46,11 @@ const checkNav_Elements = () => {
 const home_logo = document.getElementById("logo_home");
 
 const moveToHome = () => {
-    window.location.href = "index.html"
+    window.location.href = "Index.html"
 }
 
 home_logo.addEventListener("click", (e) => {
+    e.preventDefault();
     moveToHome();
 });
 
@@ -91,13 +92,9 @@ const checkInputForms = () => {
     const isWhatsAppNoValid = handleValInputs(_whatsApp_Num, "whatsApp_No_val");
     const isTelegramIdValid = handleValInputs(Tg_ID, "TG_ID_val");
     const isPasswordValid = handleValInputs(Passcode_create, "passcode_val");
-    const isPasswordConfirmValid = handleValInputs(
-      Passcode_Confirm,
-      "passcode_Confirm_val"
-    );
 
     return isFirstNameValid && isLastNameValid && isUserNameValid && isEmailValid && isWhatsAppNoValid
-    && isTelegramIdValid && isPasswordValid && isPasswordConfirmValid
+    && isTelegramIdValid && isPasswordValid 
 };
 
 f_name.addEventListener("keyup", (e) => {
@@ -161,18 +158,58 @@ show_passcode_default.addEventListener("click", (e) => {
     hidePasswords();
 })
 
-const check_passwords = () => {
-    if (Passcode_create.value != Passcode_Confirm.value) {
-        console.error("Passwords does not match")
-    }
+validate_Password_Confirm = document.getElementById("passcode_Confirm_val");
+validate_Password_Confirm.style.display = "none"
+// validate_Password_Confirm = false;
+const check_passwords = (event) => {
+     if (Passcode_Confirm.value === Passcode_create.value) {
+       console.log("Passwords match");
+       validate_Password_Confirm = true;
+        alert("success");
+       return true;
+     } else {
+        Passcode_Confirm.classList.add("val")
+       console.error("Passwords does not match");
+        validate_Password_Confirm.style.display = "block";
+     }
+     console.log(validate_Password_Confirm);
+             
 }
+
+Passcode_Confirm.addEventListener("keyup", (e) => {
+    if (Passcode_Confirm.value === Passcode_create.value) {
+        validate_Password_Confirm.style.display = "none";
+    }else{
+         validate_Password_Confirm.style.display = "block";
+    }
+})
 
 // Toggle password visibility
 const password_show = document.getElementById("show_password");
 const hide_password = document.getElementById("hide_password")
 const show_Password_Retype = () => {
-    
-}
+    if (Passcode_Confirm.type === "password") {
+        Passcode_Confirm.type = "text";
+        password_show.style.display = "block";
+        hide_password.style.display = "none"
+    }
+};
+
+hide_password.addEventListener("click", (e) => {
+    show_Password_Retype();
+})
+
+const hide_password_retype = (e) => {
+    if (Passcode_Confirm.type === "text") {
+        Passcode_Confirm.type = "password";
+         password_show.style.display = "none";
+         hide_password.style.display = "block";
+    }
+};
+
+password_show.addEventListener("click", (e) => {
+    hide_password_retype();
+})
 
 
 
@@ -180,7 +217,7 @@ const show_Password_Retype = () => {
 const form = document.getElementById("singUp_Form");
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    if (checkInputForms()) {
+    if (checkInputForms(),  check_passwords()) {
         localStorage.setItem("f_name", f_name.value);
         localStorage.setItem("l_name", l_name.value);
         localStorage.setItem("user_Name", user_Name.value);
@@ -211,11 +248,11 @@ form.addEventListener("submit", (e) => {
         //     ${Passcode_create.value}
         //     ${Passcode_Confirm.value}
         //     `)
-        check_passwords();
         window.location.href = "index.html"
     };
 
-    document.getElementById("singUp_Form").reset()
+
+    // document.getElementById("singUp_Form").reset()
 
 
     // Rember to store in LS first
