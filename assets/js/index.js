@@ -6,16 +6,18 @@ var Grand_Container = document.querySelector(".containerMain");
 
 
 
-const showLoader = () => {
-    Grand_Container.style.display = "none";
-    header.style.display = "block";
-    setTimeout(function () {
-        Grand_Container.style.display = "block";
-        header.style.display = "none"
-    }, 7000)
-};
+// const showLoader = () => {
+//     Grand_Container.style.display = "none";
+//     header.style.display = "block";
+//     setTimeout(function () {
+//         Grand_Container.style.display = "block";
+//         header.style.display = "none"
+//     }, 7000)
+// };
 
-showLoader()
+// showLoader()
+
+
 
 
 const nav_show = document.getElementById("show_nav");
@@ -23,6 +25,51 @@ const nav_hide = document.getElementById("hide_navs");
 var menu_Contents = document.querySelector(".Contents_controls");
 var Log_Ins = document.querySelector(".logIns");
 var home_Contents = document.querySelector(".Inner_contents");
+
+// Cahnge background Visibility and Modal Toggling
+var modal = document.querySelector(".modal");
+var footer = document.getElementById("Footer");
+var nav_main = document.querySelector(".nav")
+const default_icon = document.getElementById("white_default");
+const button_changer = document.getElementById("dark-changer");
+const modal_remove = document.getElementById("remove_modal");
+
+// For Modal
+const showModal = () => {
+  modal.style.display = "block";
+  setTimeout(() => {
+    modal.style.display = "none";
+  }, 7000);
+    modal.scrollIntoView({ behavior: "smooth" });
+ // Modal disappears after 3 seconds
+};
+modal_remove.addEventListener("click", (e) => {
+  modal.style.display = "none"
+})
+const background_Changer = (e) => {
+  showModal();
+  home_Contents.classList.add("changer");
+  footer.classList.add("footer_changer");
+  default_icon.style.display = "none";
+  button_changer.style.display = "block"
+  console.log(footer);
+};
+
+default_icon.addEventListener("click", () => {
+  background_Changer();
+});
+
+const background_remover = (event) =>{
+  home_Contents.classList.remove("changer");
+  footer.classList.remove("footer_changer");
+  default_icon.style.display = "block";
+  button_changer.style.display = "none";
+};
+
+button_changer.addEventListener("click", (e) => {
+  background_remover();
+})
+
 
 const show_nav_Elements = () => {
     if (menu_Contents.style.display = "none") {

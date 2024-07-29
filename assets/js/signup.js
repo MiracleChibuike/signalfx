@@ -164,13 +164,14 @@ validate_Password_Confirm.style.display = "none"
 const check_passwords = (event) => {
      if (Passcode_Confirm.value === Passcode_create.value) {
        console.log("Passwords match");
-       validate_Password_Confirm = true;
+    //    validate_Password_Confirm = true;
         alert("success");
-       return true;
+    //    return true;
      } else {
-        Passcode_Confirm.classList.add("val")
+        // Passcode_Confirm.classList.add("val")
        console.error("Passwords does not match");
         validate_Password_Confirm.style.display = "block";
+        event.preventDefault();
      }
      console.log(validate_Password_Confirm);
              
@@ -217,7 +218,7 @@ password_show.addEventListener("click", (e) => {
 const form = document.getElementById("singUp_Form");
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    if (checkInputForms(),  check_passwords()) {
+    if (checkInputForms()) {
         localStorage.setItem("f_name", f_name.value);
         localStorage.setItem("l_name", l_name.value);
         localStorage.setItem("user_Name", user_Name.value);
@@ -248,6 +249,7 @@ form.addEventListener("submit", (e) => {
         //     ${Passcode_create.value}
         //     ${Passcode_Confirm.value}
         //     `)
+         check_passwords()
         window.location.href = "index.html"
     };
 
@@ -287,3 +289,30 @@ if (
     Passcode_create.value = localStorage.getItem("Passcode_create") || "";
     Passcode_Confirm.value = localStorage.getItem("Passcode_create") || "";
 }
+
+var footer = document.getElementById("Footer");
+var nav_main = document.querySelector(".nav");
+const default_icon = document.getElementById("white_default");
+const button_changer = document.getElementById("dark-changer");
+const background_Changer = (e) => {
+  home_Contents.classList.add("changer");
+  footer.classList.add("footer_changer");
+  default_icon.style.display = "none";
+  button_changer.style.display = "block";
+  console.log(footer);
+};
+
+default_icon.addEventListener("click", () => {
+  background_Changer();
+});
+
+const background_remover = (event) => {
+  home_Contents.classList.remove("changer");
+  footer.classList.remove("footer_changer");
+  default_icon.style.display = "block";
+  button_changer.style.display = "none";
+};
+
+button_changer.addEventListener("click", (e) => {
+  background_remover();
+});

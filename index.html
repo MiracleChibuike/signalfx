@@ -37,9 +37,9 @@
 <body>
 
     <!-- Headrer For Animation -->
-     <header class="header_Animate">
+     <!-- <header class="header_Animate">
         <span class="loader"></span>
-     </header>
+     </header> -->
 
     <div class="containerMain">
        <div class="main_nav">
@@ -339,6 +339,20 @@
 
          <!-- Footer -->
             <section id="Footer">
+                <!-- Modal display -->
+                <div class="modal">
+                    <div class="modal_remove">
+                        <i class="fa-solid fa-circle-xmark" id="remove_modal"></i>
+                    </div>
+                    <div class="modal_contents">
+                        <div class="inner_contents">
+                            <i class="fa-solid fa-circle-check" id="check_success"></i>
+                            <div class="response">
+                                <p>Dark-mode now active!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="footer_Contents">
                     <div class="footer_hero">
                         <img src="assets/images/logo_home_tab.png" alt="" draggable="false">
@@ -368,6 +382,27 @@
                     <div class="email">
                         <i class="fa-solid fa-envelope"></i>
                         <span><a href="mailto:servicesmtechs@gmail.com">SignalFX</a></span>
+                    </div>
+                </div>
+                <div class="Content_visibility languages">
+                    <div class="language_div">
+                        <!-- Adding Google Translate Page -->
+                        <!-- Adding a google translate API -->
+                        <p>Language</p>
+                        <div id="google_translate_element"></div>
+                        
+                        <script type="text/javascript">
+                            function googleTranslateElementInit() {
+                                new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+                            }
+                        </script>
+                        <script type="text/javascript"
+                            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                    </div>
+                    <div class="visibilty_Icon">
+                        <p>Visibility</p>
+                        <i class="fa-regular fa-moon" id="white_default"></i>
+                        <i class="fa-solid fa-moon" id="dark-changer"></i>
                     </div>
                 </div>
                 <div class="contact_links">
