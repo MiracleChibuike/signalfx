@@ -105,6 +105,17 @@
     background: var(--clr_fx_faded_green);
     transition: .4s;
 }
+/* Change the text selection background color */
+::selection {
+  background: var(--clr_fx_faded_green); /* Custom background color */
+  color: var(--clr-fx-white_main); /* Custom text color */
+}
+
+/* For Firefox */
+::-moz-selection {
+  background: var(--clr_fx_faded_green); /* Custom background color */
+  color: var(--clr-fx-white_main); /* Custom text color */
+}
   .nav {
       background: var(--clr-fx-white_main);
       display: flex;

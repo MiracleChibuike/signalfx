@@ -4,20 +4,20 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login to your account || SignalFX</title>
+    <title>Explore Our Mentorship Courses || SignalFX</title>
     <meta name="description"
         content="SignalFX is your trusted guide to financial independence. Join our supportive community and learn the strategies for profitable forex trading." />
     <meta name="keywords"
         content="forex trading, forex education, forex learning platform, SignalFX, financial freedom, forex strategies, profitable trading, forex community" />
     <meta name="author" content="SignalFX Team" />
     <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="Login to your account" />
+    <meta property="og:title" content="Explore Our Mentorship Courses" />
     <meta property="og:description"
         content="SignalFX is your trusted guide to financial independence. Join our supportive community and learn the strategies for profitable forex trading." />
     <meta property="og:image" href="assets/images/logo_home_tab.png" />
     <meta property="og:url" content="https://signalfx.netlify.app/" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Login to your account" />
+    <meta name="twitter:title" content="Explore Our Mentorship Courses" />
     <meta name="twitter:description"
         content="SignalFX is your trusted guide to financial independence. Join our supportive community and learn the strategies for profitable forex trading." />
     <meta name="twitter:image" content="https://signalfx.netlify.app/assets/images/logo_home_tab.png" />
@@ -50,176 +50,11 @@
             --clr-semi-white: #6e6a6a;
         }
 
-        .logIn_Container {
+        .plans_Container_Main {
             margin: 100px 0 0 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
         }
 
-        .welcome_messaage {
-            transition: transform 0.9s ease, background-color 0.9s ease;
-            margin: 0 0 50px 0;
-            text-align: center;
-        }
-
-        .welcome_messaage p {
-            line-height: 1.7;
-        }
-
-        .logIn_headre {
-            font-size: 2.3rem;
-            font-weight: lighter;
-            margin: 15px 0;
-        }
-
-        .logIn_headre span {
-            color: var(--clr_fx_faded_green);
-        }
-
-        .logInform {
-            border: 1px solid var(--clr-fx-gray);
-            border-radius: 10px;
-            box-shadow: 0 0 4px var(--clr-gray-main);
-            padding: 30px;
-        }
-
-        .userName,
-        .password{
-            display: flex;
-            flex-direction: column;
-            margin: 25px 0;
-        }
-
-        label {
-            margin: 10px 0;
-            font-size: 16px;
-            color: var(--clr-gray-main);
-        }
-
-        .userName input,
-        .password input {
-            padding: 12px 10px;
-            outline: none;
-            border: 1px solid var(--clr_fx_faded_green);
-            font-size: 15px;
-            transition: transform 0.9s ease, background-color 0.9s ease;
-            /* width: 250px; */
-            color: var(--clr-semi-white);
-            border-radius: 8px;
-        }
-
-      
-        .userName input:focus,
-        .password input:focus{
-            transform: translateY(-5px);
-            transition: .7s;
-            box-shadow: 0 0 3px var(--clr_fx_faded_green);
-        }
-
-        ::placeholder {
-            color: var(--clr-gray-main);
-            font-size: 13px;
-        }
-
-        /* .policy_Accept{
-            background: var(--clr-fx-red);
-        } */
-        .logInbtn {
-            margin: 15px 0;
-        }
-
-        .logInbtn button {
-            padding: 15px 0;
-            width: 100%;
-            border: none;
-            background: var(--clr_fx_faded_green);
-            color: var(--clr-fx-white_main);
-            border-radius: 10px;
-            font-weight: bold;
-            transition: transform 0.9s ease, background-color 0.9s ease;
-            box-shadow: 0 0 4px var(--clr_fx_faded_green);
-            cursor: pointer;
-        }
-
-        .logInbtn button:hover {
-            box-shadow: 0 0 10px var(--clr-fx-green);
-            transform: scale(1.1);
-            transition: .5s;
-        }
-
-        .required {
-            color: var(--clr-fx_red_faded);
-            transition: transform 0.9s ease, background-color 0.9s ease;
-            display: none;
-        }
-
-        .required:hover {
-            transform: translateX(5px);
-        }
-
-        #passcode_Confirm_val,
-        #passcode_val,
-        #TG_ID_val,
-        #whatsApp_No_val,
-        #email_val,
-        #username_val,
-        #L-name_val,
-        #f-name_Val {
-            color: var(--clr-fx_red_faded);
-        }
-
-        .addError {
-            border: 1px solid var(--clr-fx_red_faded);
-
-        }
-
-        .password i,
-        .password_Confirm i {
-            font-size: 12px;
-            color: var(--clr-semi-white);
-            position: relative;
-            left: 235px;
-            bottom: 27px;
-            width: 40px;
-
-        }
-
-        #show_default{
-            display: none;
-            transition: transform 0.9s ease, background-color 0.9s ease;
-        }
-
-        #show_default:focus {
-            transition: .4s;
-        }
-
-        .val {
-            border: 1px solid var(--clr-fx_red_faded);
-        }
-        .signUp_account{
-            text-align: center;
-          line-height: 1.8;
-        }
-        .signUp_account p{
-             color: var(--clr-light_dark);
-        }
-        .signUp_account a{
-            text-decoration: none;
-        }
-        .signUp_account span{
-             color: var(--clr_fx_faded_green);
-          font-weight: bold;
-          cursor: pointer;
-        }
-
-        @media (min-width: 0px) and (max-width: 750px) {
-            .logIn_Container {
-                margin: 75px 0 0 0;
-            }
-        }
+    
     </style>
 </head>
 
@@ -238,7 +73,7 @@
                 <div class="Contents_controls">
                     <div class="nav_Contents">
                         <ul>
-                            <li onclick="load_mentorship_Plans()" id="mentor_courses">Mentorship Courses</li>
+                            <li id="list_mentorship">Mentorship Courses</li>
                             <li>Mentorships Plans</li>
                             <li>Blog</li>
                             <li>Faqs</li>
@@ -254,48 +89,102 @@
 
         <div class="Inner_contents">
 
-            <!-- Sign Up Page -->
-            <div class="logIn_Container">
-                <div class="welcome_messaage">
-                    <h2 class="logIn_headre">
-                        We're Glad to have you back on <span>SignalFX</span>
-                    </h2>
-                    <p>
-                        SignalFX boasts a thriving community of over 20,000 Forex Traders. Our members actively share and discuss ongoing Forex <br>
-                        Technical and Fundamental analysis. By logging into our platform, traders can exchange insights, develop strategies, and
-                        enhance their trading skills. <br> Our goal is to provide a collaborative environment where every member can grow and succeed
-                        in the Forex market.
-                    </p>
-                </div>
-                <div class="logInform">
-                    <h2 class="form_headre">
-                        Welcome back, Login now.
-                    </h2>
-                    <form action="" id="logIn_Form">
-                        <div class="userName">
-                            <label for="user-name">Enter your Username</label>
-                            <input type="text" id="user-name" placeholder="Ex. MiracleChibuike" autocomplete="username">
-                            <small class="required" id="username_val">Please enter your Username</small>
-                        </div>
-                        <div class="password">
-                            <label for="Passcode">Enter your  password</label>
-                            <input type="password" id="Passcode" placeholder="*******" autocomplete="new-password">
-                            <i class="fa-solid fa-eye-slash" id="hide_default"></i>
-                            <i class="fa-solid fa-eye" id="show_default"></i>
-                            <!-- <i class="fa-regular fa-eye-slash"></i> -->
-                            <small class="required" id="passcode_val">Please enter your password</small>
-                        </div>
-                        <div class="logInbtn">
-                            <button type="submit">Log In </button>
-                        </div>
-                    </form>
-                    <div class="signUp_account">
-                        <p>Haven't created an account yet? </p>
-                        <a href="Signup.html"><span>Sign Up now </span></a>
-                    </div>
-                </div>
+            <div class="plans_Container_Main">
+                            <!-- Our Plans -->
 
+                <section id="Plans" class="animates">
+                    <div class="plans_Container">
+                        <div class="plans_headre">
+                            <h2>Select Your <span class="plans_span">Plan</span></h2>
+                            <p>Simplifying Forex Education for You</p>
+                        </div>
+                        <div class="Plans_Select">
+                            <div class="plan_main">
+                                <div class="plans_amount">
+                                    <h3> Monthly Plan</h3>
+                                    <h2>$75</h2>
+                                    <p>Unlimited access to all resources and courses to kickstart your Forex journey.</p>
+                                </div>
+                                <ul>
+                                    <li><i class="fa-solid fa-circle-check"></i> Comprehensive Training Video Library</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Interactive Beginner and Advanced Live Classes</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Complimentary Trade Signals (Bonus)</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Dedicated Help & Support</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Exclusive Private Community Access</li>
+                                </ul>
+                                <div class="btn_offer_main">
+                                    <button class="btn_join_plans">Enroll Now</button>
+                                </div>
+                            </div>
+                            <!-- Plan 2 -->
+                            <div class="plan_2">
+                                <div class="plans_amount">
+                                    <h3>3 Months Plan</h3>
+                                    <h2>$407</h2>
+                                    <p>Unlimited access to all resources and courses for an in-depth Forex journey.</p>
+                                </div>
+                                <ul>
+                                    <li><i class="fa-solid fa-circle-check"></i> Extensive Training Video Library</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Engaging Beginner and Advanced Live Classes</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Free Trade Signals (Bonus)</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Continuous Help & Support</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Membership in an Exclusive Private Community</li>
+                                </ul>
+                                <div class="btn_offer_main">
+                                    <button class="btn_join_plans">Enroll Now</button>
+                                </div>
+                            </div>
+                            <!-- Plan 3 -->
+                            <div class="plan_3">
+                                <div class="most_Popular">
+                                    <p>Most Popular</p>
+                                </div>
+                                <div class="most_poular_contents">
+                                    <div class="plans_amount">
+                                        <h3> 6 Months Plan</h3>
+                                        <h2>$477</h2>
+                                        <p>Unlimited access to all resources and courses for an extensive Forex journey.</p>
+                                    </div>
+                                    <ul>
+                                        <li><i class="fa-solid fa-circle-check"></i> Comprehensive Training Video Library</li>
+                                        <li><i class="fa-solid fa-circle-check"></i> Interactive Beginner and Advanced Live Classes</li>
+                                        <li><i class="fa-solid fa-circle-check"></i> Complimentary Trade Signals (Bonus)</li>
+                                        <li><i class="fa-solid fa-circle-check"></i> Dedicated Help & Support</li>
+                                        <li><i class="fa-solid fa-circle-check"></i> Exclusive Private Community Access</li>
+                                    </ul>
+                                    <div class="btn_offer_main">
+                                        <button class="btn_join_plans">Enroll Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Plan 4 -->
+                            <div class="plan_4">
+                                <div class="Top_Plan">
+                                    <p>Top Plan</p>
+                                </div>
+                                <div class="Top_Plan_Contents">
+                                    <div class="plans_amount">
+                                        <h3> 1 Year Plan</h3>
+                                        <h2>$609</h2>
+                                        <p>Unlimited access to all resources and courses for an advanced Forex journey.</p>
+                                    </div>
+                                    <ul>
+                                        <li><i class="fa-solid fa-circle-check"></i> Comprehensive Training Video Library</li>
+                                        <li><i class="fa-solid fa-circle-check"></i> Interactive Beginner and Advanced Live Classes</li>
+                                        <li><i class="fa-solid fa-circle-check"></i> Complimentary Trade Signals (Bonus)</li>
+                                        <li><i class="fa-solid fa-circle-check"></i> Dedicated Help & Support</li>
+                                        <li><i class="fa-solid fa-circle-check"></i> Exclusive Private Community Access</li>
+                                    </ul>
+                                    <div class="btn_offer_main">
+                                        <button class="btn_join_plans">Enroll Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
+          
             <!-- Footer -->
             <section id="Footer">
                 <!-- Modal display -->
@@ -389,7 +278,7 @@
     <!-- FA JS Link -->
     <script src="https://kit.fontawesome.com/a0d92fbbd6.js" crossorigin="anonymous"></script>
 
-    <script src="assets/js/Login.js"></script>
+    <script src="assets/js/Mentorship.js"></script>
 </body>
 
 </html>

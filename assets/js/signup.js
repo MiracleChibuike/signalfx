@@ -1,17 +1,13 @@
 
-var header = document.querySelector(".header_Animate");
-var Grand_Container = document.querySelector(".containerMain");
 
-const showLoader = () => {
-  Grand_Container.style.display = "none";
-  header.style.display = "block";
-  setTimeout(function () {
-    Grand_Container.style.display = "block";
-    header.style.display = "none";
-  }, 7000);
+
+var courses_mentor = document.getElementById("mentor_courses");
+const load_mentorship_Plans = () => {
+  courses_mentor.style.color = "var(--clr-fx-red);";
+  window.location.href = "Mentorship_Courses.html";
+  console.log(courses_mentor);
 };
 
-showLoader();
 
 const nav_show = document.getElementById("show_nav");
 const nav_hide = document.getElementById("hide_navs");
@@ -88,14 +84,6 @@ const handleValInputs = (inputs, valMesageId) => {
         return true;
     }
 };
-
-const addAnimation = () => {
-    if (f_name.value === "") {
-        f_name.classList.add("addError");
-    }else{
-        f_name.classList.remove("addError")
-    }
-}
 
 const checkInputForms = () => {
     const isFirstNameValid = handleValInputs(f_name, "f-name_Val");
@@ -226,6 +214,14 @@ password_show.addEventListener("click", (e) => {
 })
 
 
+    const login_btn = document.getElementById("login_btn");
+const go_To_Login = () => {
+    window.location.href = "Login.html"
+};
+
+login_btn.addEventListener("click", (e) => {
+    go_To_Login();
+})
 
 // Handle forms
 const form = document.getElementById("singUp_Form");

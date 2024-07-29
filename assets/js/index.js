@@ -1,10 +1,7 @@
 
 
-
 var header = document.querySelector(".header_Animate");
 var Grand_Container = document.querySelector(".containerMain");
-
-
 
 const showLoader = () => {
     Grand_Container.style.display = "none";
@@ -17,7 +14,12 @@ const showLoader = () => {
 
 showLoader();
 
-
+var courses_mentor = document.getElementById("mentor_courses");
+const load_mentorship_Plans = () => {;
+  courses_mentor.style.color = "var(--clr-fx-red);";
+  window.location.href = "Mentorship_Courses.html"
+  console.log(courses_mentor);
+}
 
 
 const nav_show = document.getElementById("show_nav");
@@ -158,12 +160,19 @@ const checkNav_Elements = () => {
 
     const load_SignUp_Page = () => {
              window.location.href = "Signup.html";
-             showLoader();
     }
     btn_Sign_Up.addEventListener("click", (e) => {
       e.preventDefault();
       load_SignUp_Page();
       
+    });
+
+    const login_page = () => {
+      window.location.href = "Login.html"
+    };
+
+    login_btn.addEventListener("click", (e) => {
+      login_page()
     })
 
     // Prevent Image dragging

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign Up for an account</title>
+    <title>Sign Up for an account || SignalFX</title>
     <meta
       name="description"
       content="SignalFX is your trusted guide to financial independence. Join our supportive community and learn the strategies for profitable forex trading." />
@@ -182,14 +182,21 @@
          .val{
           border: 1px solid var(--clr-fx_red_faded);
          }
-         .header_Animate{
-    background: var(--clr-fx-gray);
-    display: grid;
-  place-content: center;
-  align-content: center;
-  min-height: 100vh;
-  /* display: none; */
-}
+         .login_account{
+          text-align: center;
+          line-height: 1.8;
+         }
+         .login_account p{
+          color: var(--clr-light_dark);
+         }
+         .login_account a{
+          text-decoration: none;
+         }
+         .login_account span{
+          color: var(--clr_fx_faded_green);
+          font-weight: bold;
+          cursor: pointer;
+         } 
 
          @media (min-width: 0px) and (max-width: 750px) {
           .signUp_Container{
@@ -199,10 +206,6 @@
     </style>
   </head>
   <body>
-    <!-- Headrer For Animation -->
-    <header class="header_Animate">
-      <span class="loader"></span>
-    </header>
     <div class="containerMain">
       <div class="main_nav">
         <!-- nav_Section -->
@@ -217,7 +220,7 @@
           <div class="Contents_controls">
             <div class="nav_Contents">
               <ul>
-                <li>Mentorship Courses</li>
+                <li onclick="load_mentorship_Plans()" id="mentor_courses">Mentorship Courses</li>
                 <li>Mentorships Plans</li>
                 <li>Blog</li>
                 <li>Faqs</li>
@@ -303,6 +306,10 @@
                         <button type="submit">Sign Up Now</button>
                     </div>
                 </form>
+                <div class="login_account">
+                  <p>Already created an account? </p>
+                  <a href="Login.html"><span>Log in now <i class="fa-solid fa-circle-arrow-right"></i></span></a>
+                </div>
             </div>
            
          </div>
@@ -397,6 +404,6 @@
     <!-- FA JS Link -->
     <script src="https://kit.fontawesome.com/a0d92fbbd6.js" crossorigin="anonymous"></script>
 
-    <script src="assets/js/signup.js"></script>
+    <script src="assets/js/Signup.js"></script>
   </body>
 </html>
