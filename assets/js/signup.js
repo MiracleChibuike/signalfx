@@ -1,4 +1,17 @@
 
+var header = document.querySelector(".header_Animate");
+var Grand_Container = document.querySelector(".containerMain");
+
+const showLoader = () => {
+  Grand_Container.style.display = "none";
+  header.style.display = "block";
+  setTimeout(function () {
+    Grand_Container.style.display = "block";
+    header.style.display = "none";
+  }, 7000);
+};
+
+showLoader();
 
 const nav_show = document.getElementById("show_nav");
 const nav_hide = document.getElementById("hide_navs");
@@ -292,9 +305,26 @@ if (
 
 var footer = document.getElementById("Footer");
 var nav_main = document.querySelector(".nav");
+var modal = document.querySelector(".modal");
 const default_icon = document.getElementById("white_default");
 const button_changer = document.getElementById("dark-changer");
+const modal_remove = document.getElementById("remove_modal");
+
+// For Modal
+const showModal = () => {
+  modal.style.display = "block";
+  setTimeout(() => {
+    modal.style.display = "none";
+  }, 7000);
+    modal.scrollIntoView({ behavior: "smooth" });
+ // Modal disappears after 3 seconds
+};
+modal_remove.addEventListener("click", (e) => {
+  modal.style.display = "none"
+})
+
 const background_Changer = (e) => {
+     showModal();
   home_Contents.classList.add("changer");
   footer.classList.add("footer_changer");
   default_icon.style.display = "none";

@@ -6,16 +6,16 @@ var Grand_Container = document.querySelector(".containerMain");
 
 
 
-// const showLoader = () => {
-//     Grand_Container.style.display = "none";
-//     header.style.display = "block";
-//     setTimeout(function () {
-//         Grand_Container.style.display = "block";
-//         header.style.display = "none"
-//     }, 7000)
-// };
+const showLoader = () => {
+    Grand_Container.style.display = "none";
+    header.style.display = "block";
+    setTimeout(function () {
+        Grand_Container.style.display = "block";
+        header.style.display = "none"
+    }, 7000)
+};
 
-// showLoader()
+showLoader();
 
 
 
@@ -158,6 +158,7 @@ const checkNav_Elements = () => {
 
     const load_SignUp_Page = () => {
              window.location.href = "Signup.html";
+             showLoader();
     }
     btn_Sign_Up.addEventListener("click", (e) => {
       e.preventDefault();

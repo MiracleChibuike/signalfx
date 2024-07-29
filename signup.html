@@ -182,6 +182,14 @@
          .val{
           border: 1px solid var(--clr-fx_red_faded);
          }
+         .header_Animate{
+    background: var(--clr-fx-gray);
+    display: grid;
+  place-content: center;
+  align-content: center;
+  min-height: 100vh;
+  /* display: none; */
+}
 
          @media (min-width: 0px) and (max-width: 750px) {
           .signUp_Container{
@@ -191,6 +199,10 @@
     </style>
   </head>
   <body>
+    <!-- Headrer For Animation -->
+    <header class="header_Animate">
+      <span class="loader"></span>
+    </header>
     <div class="containerMain">
       <div class="main_nav">
         <!-- nav_Section -->
