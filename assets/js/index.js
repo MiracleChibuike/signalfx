@@ -4,11 +4,12 @@ var header = document.querySelector(".header_Animate");
 var Grand_Container = document.querySelector(".containerMain");
 
 const showLoader = () => {
-    Grand_Container.style.display = "none";
     header.style.display = "block";
     setTimeout(function () {
-        Grand_Container.style.display = "block";
-        header.style.display = "none"
+        if (Grand_Container.style.display = "none") {
+              Grand_Container.style.display = "block";
+                        header.style.display = "none";
+        }
     }, 7000)
 };
 

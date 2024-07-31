@@ -116,6 +116,11 @@
   background: var(--clr_fx_faded_green); /* Custom background color */
   color: var(--clr-fx-white_main); /* Custom text color */
 }
+
+/* Styling for container_Main */
+.containerMain{
+  display: none;
+}
   .nav {
       background: var(--clr-fx-white_main);
       display: flex;
